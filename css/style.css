@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: grey;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.quadrante{
+    margin-top: 80px;
+}
+
+#timer{
+    margin: auto;
+    height: 230px;
+    width: 230px;
+    border-radius: 50%;
+    background-color: pink;
+    border: 10px solid palevioletred;
+}
+h2{
+    text-align: center;
+    vertical-align: middle;
+}
