@@ -9,7 +9,7 @@ body{
     font-family: 'PT Sans Narrow', sans-serif;
 }
 .quadrante{
-    margin-top: 80px;
+    margin-top: 200px;
 }
 
 #timer{
@@ -19,6 +19,7 @@ body{
     border-radius: 50%;
     background-color: pink;
     border: 10px solid palevioletred;
+    box-shadow: 2px 4px 7px rgb(82, 81, 81);
 }
 h2{
     text-align: center;
