@@ -14,7 +14,14 @@ alert(numeriRandom);
 console.log(numeriRandom); 
 //timer//
 var time=30;
-
-setTimeout(function(){ 
-    document.getElementById("conteggio").innerHTML
-}, 1000);
+var conteggio=setInterval(
+    function(){ 
+        document.getElementById("conteggio").innerHTML=time;
+        time--;
+        if(time==-1){
+            clearInterval(conteggio);
+            
+        }
+    
+    }, 1000
+);
