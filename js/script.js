@@ -5,16 +5,7 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 //funzione di verifica
-function inArray(arr, el) {
-	var count = 0;
-	while ( count < arr.length ) {
-		if ( arr[count] == el ) {
-			return true;
-		}
-		count++;
-	}
-	return false;
-}
+
 
 var numeriRandom=[];
 var numeriInseriti=[];
@@ -34,13 +25,17 @@ var conteggio=setInterval(
         time--;
         if(time==-1){
             clearInterval(conteggio);
-            for(var i=0;i<5;i++){                
+            for(var i=1;i<=5;i++){                
                 var numeriUtente=parseInt(prompt("inserisci i numeri che ricordi!"));
-
-                if(inArrey(numeriInseriti[i])==true && inArrey(numeriRandom[i])==true){
-                    alert("Hai indovinato tutti i numeri!");{}
+                numeriInseriti.push(numeriUtente);
+            }
+            var numeriIndovinati=[];
+            for(var i=0;i<numeriInseriti.length;i++){
+                if(numeriRandom.includes(numeriInseriti[i])==true && numeriIndovinati.includes(numeriInseriti[i])==false){
+                    numeriIndovinati.push(numeriInseriti[i]);
                 }
             }
+            alert(`Hai indovinato ${numeriIndovinati.length}(${numeriIndovinati})`);
         }
     
     }, 1000
